@@ -1,14 +1,14 @@
 package com.example.volunteeringapp;
 
+import android.content.Intent;
 import android.app.Activity;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 public class JobListingActivity extends Activity {
 
     private ListView jobListView;
-    private ArrayAdapter<String> adapter;
+    private JobListAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,25 +17,33 @@ public class JobListingActivity extends Activity {
 
         jobListView = findViewById(R.id.jobListView);
 
-        // Sample job listings (you should replace this with actual data)
-        String[] jobListings = {
-                "Volunteer at Local Food Bank",
-                "Help with Community Cleanup",
-                "Teach Programming to Kids",
-                "Assist Elderly with Grocery Shopping",
-                // Add more job listings here
+        JobListing[] jobListings = {
+                new JobListing("Volunteer at Local Food Bank", "Location: City A", "foobar"),
+                new JobListing("Help with Community Cleanup", "Location: City B", "foobar"),
+                new JobListing("Teach Programming to Kids", "Location: City C", "foobar"),
+                new JobListing("Assist Elderly with Grocery Shopping", "Location: City D", "foobar"),
         };
 
-        // Create an ArrayAdapter to display job listings
-        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, jobListings);
-
-        // Set the adapter for the ListView
+        adapter = new JobListAdapter(this, jobListings);
         jobListView.setAdapter(adapter);
 
-        // Handle item click events (e.g., navigate to job details)
         jobListView.setOnItemClickListener((parent, view, position, id) -> {
-            String selectedJob = adapter.getItem(position);
-            // Implement the action to view job details or apply for the job
+            JobListing selectedJob = adapter.getItem(position);
+
+            // Create an Intent to start the JobDetailActivity
+            Intent intent = new Intent(JobListingActivity.this, JobDetailActivity.class);
+
+            // Pass job details as extras to the intent
+            intent.putExtra("job_name", selectedJob.getName());
+            intent.putExtra("job_location", selectedJob.getLocation());
+            intent.putExtra("job_description", selectedJob.getDescription());
+
+            // Start the JobDetailActivity
+            startActivity(intent);
         });
+
+
+
     }
 }
+
