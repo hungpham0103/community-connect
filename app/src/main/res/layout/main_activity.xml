@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/inspiringText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Volunteering is a powerful way to create positive change in your community. Join us in making a difference!"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="32dp" />
+
+    <Button
+        android:id="@+id/browseJobsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Browse Job Listings"
+        android:layout_below="@id/inspiringText"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rounded_button"
+        android:textColor="#FFFFFF" />
+
+</RelativeLayout>
