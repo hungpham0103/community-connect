@@ -1,12 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    tools:context=".JobPostingActivity">
+    android:orientation="vertical"
+    android:padding="16dp">
 
+    <EditText
+        android:id="@+id/jobTitleEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Job Title" />
 
+    <EditText
+        android:id="@+id/jobLocationEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Location" />
 
-</RelativeLayout>
+    <EditText
+        android:id="@+id/jobDescriptionEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Description"
+        android:inputType="textMultiLine" />
+
+    <Button
+        android:id="@+id/addJobButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Job"
+        android:background="@drawable/rounded_button"
+        android:textColor="#FFFFFF"/>
+
+</LinearLayout>
