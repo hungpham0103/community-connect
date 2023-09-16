@@ -9,7 +9,6 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     private Button browseJobsButton;
-    private Button postJobButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
 
         browseJobsButton = findViewById(R.id.browseJobsButton);
 
-        // Handle the "Browse Jobs" button click
         browseJobsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
