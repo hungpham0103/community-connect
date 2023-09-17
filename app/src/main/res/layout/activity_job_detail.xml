@@ -9,20 +9,42 @@
         android:id="@+id/jobNameTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="8dp"/>
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/jobLocationTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:layout_marginBottom="8dp"/>
+        android:layout_marginBottom="8dp"
+        android:text="Location: "
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/jobDescriptionTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="16sp"/>
+        android:layout_marginBottom="8dp"
+        android:text="Description: "
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/jobDurationTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Expected number of hours: "
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/applyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_background"
+        android:text="Apply"
+        android:textColor="@color/button_text_color"
+        android:textSize="16sp" />
 </LinearLayout>

@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
     android:orientation="vertical"
     android:padding="16dp">
 
@@ -24,12 +25,48 @@
         android:hint="Description"
         android:inputType="textMultiLine" />
 
+    <EditText
+        android:id="@+id/jobDurationEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Duration"
+        android:inputType="textMultiLine" />
+
+    <ScrollView
+        android:layout_width="380dp"
+        android:layout_height="233dp"
+        android:scrollbars="none">
+
+        <DatePicker
+            android:id="@+id/jobDatePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:headerBackground="@drawable/button_background"
+            android:scaleX="1"
+            android:scaleY="1" />
+    </ScrollView>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="228dp"
+        android:scrollbars="none">
+
+        <TimePicker
+            android:id="@+id/jobTimePicker"
+            android:layout_width="match_parent"
+            android:layout_height="318dp"
+            android:layout_marginTop="16dp"
+            android:scaleX="1"
+            android:scaleY="1" />
+    </ScrollView>
+
     <Button
         android:id="@+id/addJobButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add Job"
         android:background="@drawable/rounded_button"
-        android:textColor="#FFFFFF"/>
+        android:text="Add Job"
+        android:textColor="#FFFFFF" />
 
 </LinearLayout>

@@ -10,12 +10,34 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="18sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textColor="#4284FF"/>
 
     <TextView
-        android:id="@+id/jobInfoTextView"
+        android:id="@+id/jobLocationTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text = "Location"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/jobDurationTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text = "Expected working hours: "
+        android:textSize="14sp" />
+    <TextView
+        android:id="@+id/jobTimeTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:text = "Time: " />
+
+    <TextView
+        android:id="@+id/jobDateTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text = "Date: "
         android:textSize="14sp" />
 
 </LinearLayout>
